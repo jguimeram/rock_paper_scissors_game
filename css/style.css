@@ -1,0 +1,31 @@
+:root {
+    font-family: 'Victor Mono', monospace;
+}
+
+.container {
+    width: 600px;
+    height: 600px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card {
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    background-color: brown;
+    cursor: pointer;
+}
+
+.card p {
+    color: #FFF;
+    font-weight: 700;
+}
+
+.card:hover {
+    background-color: yellowgreen;
+}
