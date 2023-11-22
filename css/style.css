@@ -26,6 +26,20 @@
     font-weight: 700;
 }
 
+.card#rock {
+    background: url("../img/rock.svg");
+}
+
+.card#paper {
+    background: url("../img/paper.svg");
+}
+
+.card#scissors {
+    background: url("../img/scissors.svg");
+}
+
+
+
 .card:hover {
     background-color: yellowgreen;
 }
