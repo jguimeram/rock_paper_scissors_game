@@ -16,12 +16,28 @@
 
 <body>
     <div class="container">
-        <div class="card" id="rock">
+        <div class="arena">
+            <div class="result" id="player">
+                <div class="circle"></div>
+                <h3>player</h3>
+            </div>
+            <div class="result" id="computer">
+                <div class="circle"></div>
+                <h3>computer</h3>
+            </div>
         </div>
-        <div class="card" id="paper">
+        <div class="cards">
+            <div class="card">
+                <img src=" img/rock.svg" alt="" id="rock">
+            </div>
+            <div class="card" id="paper">
+                <img src="img/paper.svg" alt="" id="paper">
+            </div>
+            <div class="card" id="scissors">
+                <img src="img/scissors.svg" alt="" id="scissors">
+            </div>
         </div>
-        <div class="card" id="scissors">
-        </div>
+        <input type="button" value="start" class="gameButton">
     </div>
 </body>
 
