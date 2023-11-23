@@ -5,12 +5,18 @@
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 *,
 *:before,
 *:after {
     box-sizing: inherit;
+}
+
+h2 {
+    font-size: 3rem;
 }
 
 .container {
@@ -36,7 +42,6 @@ html {
 .arena {
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 50px;
 }
 
 .circle {
@@ -79,4 +84,19 @@ img {
     width: 50%;
     align-self: center;
     cursor: pointer;
+}
+
+.score {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+
+.versus {
+    text-align: center;
+    flex-basis: 50px;
+
 }
