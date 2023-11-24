@@ -1,32 +1,87 @@
 :root {
     font-family: 'Victor Mono', monospace;
+    --color-white: #FFF;
+    --color-black: #000;
 }
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+
 }
 
 *,
 *:before,
 *:after {
     box-sizing: inherit;
+    margin: 0px;
+    padding: 0px;
 }
 
-/* .game {
-    width: 100vw;
-    height: 100vh;
-    background: url('../img/background.png') no-repeat center;
-    background-size: cover;
-    position: fixed;
-    overflow: hidden;
-} */
+
 
 .game {
     width: 100vw;
     height: 100vh;
     background: linear-gradient(90deg, rgba(34, 193, 195, 1) 0%, rgba(253, 45, 148, 1) 100%);
+    display: flex;
+}
 
+.board {
+    width: 950px;
+    height: 850px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, .3);
+    border-radius: 50px;
+}
+
+.board__title {
+    color: var(--color-white);
+    text-align: center;
+    font-weight: 700;
+}
+
+.board__score {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    .score {
+        color: var(--color-white);
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .score__number {
+        font-size: 100px;
+        font-weight: 700;
+        margin-top: 50px;
+    }
+
+    .score__name {
+        font-size: 1.5rem;
+        margin-top: 15px;
+    }
+
+}
+
+.board__icons {
+    display: grid;
+    width: 75%;
+    margin: auto;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 100px;
+    justify-items: center;
+
+    .icons {
+        cursor: pointer;
+    }
+}
+
+.board__messages {
+    margin-top: 100px;
+    color: var(--color-white);
+    font-weight: 700;
+    text-align: center;
+    padding: 1rem;
 }
