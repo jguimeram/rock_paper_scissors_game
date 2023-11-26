@@ -19,10 +19,4 @@ export default class Item {
         console.log(this.playerChoice)
     }
 
-    setItem() {
-        return this.item
-    }
-
-
-
 }
