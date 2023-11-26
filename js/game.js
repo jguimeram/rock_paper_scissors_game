@@ -34,6 +34,7 @@ function playerTurn() {
 
 
 }
+
 function AITurn() {
     let option = Math.floor(Math.random() * 3)
     if (option >= 3) throw new ('wrong AI Selection: ', option)
