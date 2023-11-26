@@ -1,4 +1,3 @@
-import Player from "./Player.js"
 import Item from "./Item.js"
 
 document.addEventListener('DOMContentLoaded', () => {
