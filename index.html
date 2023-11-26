@@ -5,18 +5,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,300;0,400;0,500;0,700;1,700&display=swap">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/app.js" defer></script>
+    <script type="module" src="js/game.js" defer></script>
     <title>RPS Game</title>
 </head>
 
 <body>
     <section class="game">
+        <div class="actions">
+            <p class="actions--p">ACTION 1</p>
+            <p class="actions--p">ACTION 2</p>
+            <p class="actions--p">ACTION 3</p>
+            <p class="actions--p">ACTION 4</p>
+        </div>
         <div class="board">
             <h1 class="board__title">Rock, Paper, Scissors</h1>
             <div class="board__score">
@@ -30,13 +37,22 @@
                 </div>
             </div>
             <div class="board__icons">
-                <img class="icons" src="img/rock.svg">
-                <img class="icons" src="img/paper.svg">
-                <img class="icons" src="img/scissors.svg">
+                <img class="icons" data-id=0 id="rock" src="img/rock.svg">
+                <img class="icons" data-id=1 id="paper" src="img/paper.svg">
+                <img class="icons" data-id=2 id="scissors" src="img/scissors.svg">
             </div>
             <div class="board__messages">
                 <h1>Welcome!</h1>
             </div>
+            <div class="board__reset">
+                <input type="button" value="Start Game" class="board__reset--button">
+            </div>
+        </div>
+        <div class="actions">
+            <p class="actions--p">ACTION 1</p>
+            <p class="actions--p">ACTION 2</p>
+            <p class="actions--p">ACTION 3</p>
+            <p class="actions--p">ACTION 4</p>
         </div>
     </section>
 </body>

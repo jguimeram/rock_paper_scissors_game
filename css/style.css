@@ -21,18 +21,36 @@ html {
 
 
 .game {
-    width: 100vw;
     height: 100vh;
     background: linear-gradient(90deg, rgba(34, 193, 195, 1) 0%, rgba(253, 45, 148, 1) 100%);
     display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.actions {
+    width: 300px;
+    height: 850px;
+    background-color: rgba(0, 0, 0, .3);
+    border-radius: 50px;
+    margin: auto 0;
+}
+
+.actions--p {
+    text-align: center;
+    width: 75%;
+    display: block;
+    color: var(--color-white);
+    margin: auto;
+    padding: 1rem;
 }
 
 .board {
     width: 950px;
     height: 850px;
-    margin: auto;
     background-color: rgba(0, 0, 0, .3);
     border-radius: 50px;
+    margin: auto 0;
 }
 
 .board__title {
@@ -84,4 +102,28 @@ html {
     font-weight: 700;
     text-align: center;
     padding: 1rem;
+}
+
+.board__reset {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.board__reset--button {
+    margin: auto;
+    width: 50%;
+    background-color: orange;
+    border-radius: 10px;
+    padding: 1rem;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.board__reset--button:hover {
+    background-color: rgb(248, 184, 64);
+
 }
