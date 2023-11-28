@@ -1,5 +1,7 @@
 import Item from "./Item.js"
 
+const item = new Item()
+
 document.addEventListener('DOMContentLoaded', () => {
 
     //push start button
@@ -8,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     playerTurn()
     //AI turn
     AITurn()
-
+    //show score
 })
 
 function startGame() {
@@ -43,15 +45,34 @@ function AITurn() {
 function callItem(playerChoice) {
 
     const computerChoice = AITurn()
-
-    const item = new Item()
+    let res
 
     item.getPlayerOption(playerChoice)
 
     item.getComputerOption(computerChoice)
 
-    item.setResult()
+    res = item.setResult()
+
+    scoreDisplay(res)
+
 }
+
+function scoreDisplay(res) {
+
+    /**
+     * @var res 0 AI| 1 P| -1 T
+     */
+    const score = document.querySelector('.board__score')
+
+
+
+    // 
+
+
+
+}
+
+
 
 
 
