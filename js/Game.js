@@ -1,41 +1,32 @@
 export default class Game {
 
-    playerChoice
-    computerChoice
+    playerOption = null
+
+    constructor() {
+        this.playerSelection = document.querySelector('.board__icons')
+        this.setPlayerTurn()
+        this.playerGame()
+    }
+
+    setPlayerTurn() {
+        this.playerSelection.addEventListener('click', (e) => {
+            if (e.target.classList.contains('icons')) {
+                this.playerOption = e.target.dataset.id
+            }
+        })
+    }
+
+
+
+    playerGame() {
+        console.log(this.playerOption);
+    }
+
 
     AITurn() {
         let option = Math.floor(Math.random() * 3)
         if (option >= 3) throw new ('wrong AI Selection: ', option)
-
         return option
-    }
-
-    playerTurn() {
-        const playerSelection = document.querySelector('.board__icons')
-        let option
-        playerSelection.addEventListener('click', (e) => {
-
-            if (e.target.classList.contains('icons')) {
-                option = e.target.dataset.id
-            }
-        })
-
-        return option
-    }
-
-    _getPlayerChoice() {
-        this.playerChoice = this.playerTurn()
-    }
-
-    _getComputerChoice() {
-        this.computerChoice = this.AITurn()
-    }
-
-    setPlayerChoice() {
-        return this.playerChoice
-    }
-    setComputerChoice() {
-        return this.computerChoice
     }
 
 }
