@@ -1,52 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- new version-->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,300;0,400;0,500;0,700;1,700&display=swap">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/app.js" defer></script>
+    <script type="module" src="js/app.js" defer></script>
     <title>RPS Game</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="arena">
-            <div class="result" id="player">
-                <div class="circle player__selection"></div>
-                <h3>player</h3>
+    <section class="game">
+        <div class="actions">
+        </div>
+        <div class="board">
+            <h1 class="board__title">Rock, Paper, Scissors</h1>
+            <div class="board__score">
+                <div class="score score__player">
+                    <p class="score__number">0</p>
+                    <p class="score__name">Player</p>
+                </div>
+                <div class="score score__computer">
+                    <p class="score__number">0</p>
+                    <p class="score__name">Computer</p>
+                </div>
             </div>
-            <div class="versus">
-                <h3>VS</h3>
-                <p class="board"></p>
+            <div class="board__icons">
+                <img class="icons" data-id=0 id="rock" src="img/rock.svg">
+                <img class="icons" data-id=1 id="paper" src="img/paper.svg">
+                <img class="icons" data-id=2 id="scissors" src="img/scissors.svg">
             </div>
-            <div class="result" id="computer">
-                <div class="circle computer__selection"></div>
-                <h3>computer</h3>
+            <div class="board__messages">
+                <h1>Welcome!</h1>
+            </div>
+            <div class="board__reset">
+                <input type="button" value="Reset Game" class="board__reset--button">
             </div>
         </div>
-        <div class="score">
-            <h2 class="player__score">0</h2>
-            <h2 class="computer__score">0</h2>
+        <div class="actions">
         </div>
-        <div class="cards">
-            <div class="card">
-                <img src=" img/rock.svg" alt="" class="card-img" id="rock">
-            </div>
-            <div class="card" id="paper">
-                <img src="img/paper.svg" alt="" class="card-img" id="paper">
-            </div>
-            <div class="card" id="scissors">
-                <img src="img/scissors.svg" alt="" class="card-img" id="scissors">
-            </div>
-        </div>
-        <input type="button" value="start" class="gameButton">
-    </div>
+    </section>
 </body>
 
 </html>
